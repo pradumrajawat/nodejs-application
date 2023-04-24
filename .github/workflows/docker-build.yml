@@ -25,5 +25,5 @@ jobs:
 
       - name: Building a nodejs application and pushing to dockerhub
         run: |
-          docker build -t pradumrajawat/nodejs-application:latest
+          docker build -t pradumrajawat/nodejs-application:latest .
           docker push pradumrajawat/nodejs-application:latest
