@@ -1,14 +1,19 @@
 # nodejs-application
 
-## Build the nodejs containerized application.
+## Build & push the nodejs containerized application.
 ``
-docker build -t nodejs-application:latest .
+docker build -t pradumrajawat/nodejs-application:latest .
+docker push pradumrajawat/nodejs-application:latest
 ``
-## Run the nodejs containerized application using `docker run` command.
+
+# Run the application on EC2 instance.
+## Clone the github repo
 ``
-docker run -dit -p 3000:3000 nodejs-application:latest
+git clone git@github.com:pradumrajawat/nodejs-application.git
 ``
-## Run the nodejs containerized application using `docker-compose` command.
+## Pull image from dockerhub
 ``
+docker login
+docker pull pradumrajawat/nodejs-application:latest
 docker-compose up -d
 ``
